@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 
 using AppKit;
 using Foundation;
@@ -29,6 +30,11 @@ namespace ToDoList
                 base.RepresentedObject = value;
                 // Update the view, if already loaded.
             }
+        }
+
+        partial void AddButtonClick(Foundation.NSObject sender)
+        {
+            Debug.Write("Add button clicked");
         }
     }
 }
