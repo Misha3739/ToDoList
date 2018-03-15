@@ -34,7 +34,16 @@ namespace ToDoList
 
         partial void AddButtonClick(Foundation.NSObject sender)
         {
-            Debug.Write("Add button clicked");
+            if (string.IsNullOrEmpty(TextField.StringValue))
+            {
+                //(NSApplication.SharedApplication.Delegate as AppDelegate)?.Sel
+                var todoItem =  new ToDoItem()
+                {
+                    Name = TextField.StringValue,
+                    IsImportant = ImportantCheckBox.IntValue == 1
+                }
+            
+            }
         }
     }
 }
