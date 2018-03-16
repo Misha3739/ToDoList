@@ -48,13 +48,13 @@ namespace ToDoList
 
             //AddDummyData();
 
-            //this.ToDoTable.DataSource = _dataSource;
+            this.ToDoTable.DataSource = _dataSource;
             this.ToDoTable.Delegate = new ToDoItemTableDelegate(_dataSource);
 		}
 
 		partial void AddButtonClick(Foundation.NSObject sender)
         {
-            if (string.IsNullOrEmpty(TextField.StringValue))
+            if (!string.IsNullOrEmpty(TextField.StringValue))
             {
                 //(NSApplication.SharedApplication.Delegate as AppDelegate)?.Sel
                 var todoItem = new ToDoItem()
@@ -62,7 +62,8 @@ namespace ToDoList
                     Name = TextField.StringValue,
                     IsImportant = ImportantCheckBox.IntValue == 1
                 };
-            
+                this._dataSource.Items.Add(todoItem);
+                ToDoTable.ReloadData();
             }
         }
 
