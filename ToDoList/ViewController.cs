@@ -36,11 +36,19 @@ namespace ToDoList
             }
         }
 
+        private void AddDummyData()
+        {
+            ToDoItem item = new ToDoItem("First item", true);
+            this._dataSource.Items.Add(item);
+        }
+
 		public override void AwakeFromNib()
 		{
             base.AwakeFromNib();
 
-            this.ToDoTable.DataSource = _dataSource;
+            //AddDummyData();
+
+            //this.ToDoTable.DataSource = _dataSource;
             this.ToDoTable.Delegate = new ToDoItemTableDelegate(_dataSource);
 		}
 
