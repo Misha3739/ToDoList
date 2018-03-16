@@ -70,6 +70,7 @@ namespace ToDoList
 		protected override void Dispose(bool disposing)
 		{
             //Dispose datasource
+            _dataSource.Dispose();
             base.Dispose(disposing);
 		}
 	}
