@@ -52,21 +52,22 @@
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-128.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-128%402x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-16.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-16%402x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-256.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-256%402x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-32.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-32%402x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-512.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-512%402x.png" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon_512x512%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon_512x512.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon_32x32%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon_32x32.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon_256x256%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon_256x256.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon_16x16%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon_16x16.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon_128x128%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon_128x128.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
     <Folder Include="Model\" />
+    <Folder Include="Resources\Icons\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -85,6 +86,18 @@
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Main.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Icons\todo-icon\icon.iconset\icon_128x128.png" />
+    <BundleResource Include="Resources\Icons\todo-icon\icon.iconset\icon_128x128%402x.png" />
+    <BundleResource Include="Resources\Icons\todo-icon\icon.iconset\icon_16x16.png" />
+    <BundleResource Include="Resources\Icons\todo-icon\icon.iconset\icon_16x16%402x.png" />
+    <BundleResource Include="Resources\Icons\todo-icon\icon.iconset\icon_256x256.png" />
+    <BundleResource Include="Resources\Icons\todo-icon\icon.iconset\icon_256x256%402x.png" />
+    <BundleResource Include="Resources\Icons\todo-icon\icon.iconset\icon_32x32.png" />
+    <BundleResource Include="Resources\Icons\todo-icon\icon.iconset\icon_32x32%402x.png" />
+    <BundleResource Include="Resources\Icons\todo-icon\icon.iconset\icon_512x512.png" />
+    <BundleResource Include="Resources\Icons\todo-icon\icon.iconset\icon_512x512%402x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.CSharp.targets" />
 </Project>
