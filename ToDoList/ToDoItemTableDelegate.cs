@@ -63,7 +63,7 @@ namespace ToDoList
                         };
 
                         // Add to view
-                        //view.AddSubview(button);
+                        view.AddSubview(button);
                         break;
                     default:
                         view.TextField = new NSTextField(new CGRect(0, 0, 400, 16));
