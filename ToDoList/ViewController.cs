@@ -20,6 +20,8 @@ namespace ToDoList
         {
             base.ViewDidLoad();
 
+            this.ToDoTable.DataSource = _dataSource;
+            this.ToDoTable.Delegate = new ToDoItemTableDelegate(_dataSource, this);
             // Do any additional setup after loading the view.
         }
 
@@ -48,8 +50,7 @@ namespace ToDoList
 
             //AddDummyData();
 
-            this.ToDoTable.DataSource = _dataSource;
-            this.ToDoTable.Delegate = new ToDoItemTableDelegate(_dataSource);
+
 		}
 
 		partial void AddButtonClick(Foundation.NSObject sender)
@@ -67,6 +68,11 @@ namespace ToDoList
 
                 ClearData();
             }
+        }
+
+        public void ReloadTable()
+        {
+            ToDoTable.ReloadData();
         }
 
         private void ClearData()
