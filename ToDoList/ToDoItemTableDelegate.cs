@@ -65,10 +65,18 @@ namespace ToDoList
                         // Add to view
                         view.AddSubview(button);
                         break;
-                    default:
+                    case "Name":
                         view.TextField = new NSTextField(new CGRect(0, 0, 400, 16));
                         view.TextField.Identifier = c_cellIdentifier;
                         ConfigureTextField(view,row);
+                        break;
+                    case "Important":
+                        var checkBoxView = new NSButton(new CGRect(0, 0, 81, 16));
+                        checkBoxView.SetButtonType(NSButtonType.Switch);
+                        checkBoxView.Title = "";
+                        checkBoxView.Alignment = NSTextAlignment.Center;
+                        checkBoxView.Identifier = c_cellIdentifier;
+                        view.AddSubview(checkBoxView);
                         break;
                 }
 
@@ -81,7 +89,7 @@ namespace ToDoList
                     view.TextField.StringValue = _dataSource.Items[(int)row].Name;
                     break;
                 case "Important":
-                    view.TextField.StringValue = _dataSource.Items[(int)row].IsImportant.ToString();
+                    (view.Subviews[0] as NSButton).IntValue = _dataSource.Items[(int)row].IsImportant ? 1 : 0;
                     break;
             }
 
