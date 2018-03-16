@@ -9,5 +9,12 @@ namespace ToDoList
 
         [Export("name")]
         public string Name { get; set; }
+
+        public ToDoItem(){}
+
+        public ToDoItem(string name, bool isImportant){
+            this.Name = name;
+            this.IsImportant = isImportant;
+        }
     }
 }
