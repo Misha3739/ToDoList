@@ -64,7 +64,15 @@ namespace ToDoList
                 };
                 this._dataSource.Items.Add(todoItem);
                 ToDoTable.ReloadData();
+
+                ClearData();
             }
+        }
+
+        private void ClearData()
+        {
+            this.ImportantCheckBox.IntValue = 0;
+            this.TextField.StringValue = "";
         }
 
 		protected override void Dispose(bool disposing)
