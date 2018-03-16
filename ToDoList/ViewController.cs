@@ -3,13 +3,17 @@ using System.Diagnostics;
 
 using AppKit;
 using Foundation;
+using ToDoList.Model;
 
 namespace ToDoList
 {
     public partial class ViewController : NSViewController
     {
+        private readonly ToDoItemDataSource _dataSource;
+
         public ViewController(IntPtr handle) : base(handle)
         {
+            _dataSource = new ToDoItemDataSource();
         }
 
         public override void ViewDidLoad()
@@ -32,7 +36,15 @@ namespace ToDoList
             }
         }
 
-        partial void AddButtonClick(Foundation.NSObject sender)
+		public override void AwakeFromNib()
+		{
+            base.AwakeFromNib();
+
+            this.ToDoTable.DataSource = _dataSource;
+            this.ToDoTable.Delegate = new ToDoItemTableDelegate(_dataSource);
+		}
+
+		partial void AddButtonClick(Foundation.NSObject sender)
         {
             if (string.IsNullOrEmpty(TextField.StringValue))
             {
@@ -45,5 +57,11 @@ namespace ToDoList
             
             }
         }
-    }
+
+		protected override void Dispose(bool disposing)
+		{
+            //Dispose datasource
+            base.Dispose(disposing);
+		}
+	}
 }

@@ -81,6 +81,7 @@
     </Compile>
     <Compile Include="Model\ToDoItem.cs" />
     <Compile Include="Model\ToDoItemDataSource.cs" />
+    <Compile Include="ToDoItemTableDelegate.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Main.storyboard" />
