@@ -9,37 +9,61 @@ using System.CodeDom.Compiler;
 
 namespace ToDoList
 {
-    [Register ("ViewController")]
-    partial class ViewController
-    {
-        [Outlet]
-        AppKit.NSButton AddButton { get; set; }
+	[Register ("ViewController")]
+	partial class ViewController
+	{
+		[Outlet]
+		AppKit.NSButton AddButton { get; set; }
 
-        [Outlet]
-        AppKit.NSButton ImportantCheckBox { get; set; }
+		[Outlet]
+		AppKit.NSButton ImportantCheckBox { get; set; }
 
-        [Outlet]
-        AppKit.NSTextField TextField { get; set; }
+		[Outlet]
+		AppKit.NSTableColumn ImportantColumn { get; set; }
 
-        [Action ("AddButtonClick:")]
-        partial void AddButtonClick (Foundation.NSObject sender);
-        
-        void ReleaseDesignerOutlets ()
-        {
-            if (TextField != null) {
-                TextField.Dispose ();
-                TextField = null;
-            }
+		[Outlet]
+		AppKit.NSTableColumn NameColumn { get; set; }
 
-            if (ImportantCheckBox != null) {
-                ImportantCheckBox.Dispose ();
-                ImportantCheckBox = null;
-            }
+		[Outlet]
+		AppKit.NSTextField TextField { get; set; }
 
-            if (AddButton != null) {
-                AddButton.Dispose ();
-                AddButton = null;
-            }
-        }
-    }
+		[Outlet]
+		AppKit.NSTableView ToDoTable { get; set; }
+
+		[Action ("AddButtonClick:")]
+		partial void AddButtonClick (Foundation.NSObject sender);
+		
+		void ReleaseDesignerOutlets ()
+		{
+			if (AddButton != null) {
+				AddButton.Dispose ();
+				AddButton = null;
+			}
+
+			if (ImportantCheckBox != null) {
+				ImportantCheckBox.Dispose ();
+				ImportantCheckBox = null;
+			}
+
+			if (TextField != null) {
+				TextField.Dispose ();
+				TextField = null;
+			}
+
+			if (ToDoTable != null) {
+				ToDoTable.Dispose ();
+				ToDoTable = null;
+			}
+
+			if (NameColumn != null) {
+				NameColumn.Dispose ();
+				NameColumn = null;
+			}
+
+			if (ImportantColumn != null) {
+				ImportantColumn.Dispose ();
+				ImportantColumn = null;
+			}
+		}
+	}
 }

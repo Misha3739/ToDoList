@@ -691,7 +691,7 @@
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
                                                 <tableColumn identifier="" width="45.5" minWidth="40" maxWidth="1000" id="heg-DP-Guu">
-                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
+                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Name">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -724,7 +724,7 @@
                                                     </prototypeCellViews>
                                                 </tableColumn>
                                                 <tableColumn identifier="" width="213" minWidth="40" maxWidth="1000" id="HHt-9v-wIP">
-                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
+                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Important">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -761,7 +761,7 @@
                                     </subviews>
                                 </clipView>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="kgs-gw-7ka">
-                                    <rect key="frame" x="1" y="119" width="223" height="15"/>
+                                    <rect key="frame" x="1" y="8" width="0.0" height="15"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="L19-c9-PGc">
@@ -815,7 +815,10 @@
                     <connections>
                         <outlet property="AddButton" destination="vnz-Zz-Upn" id="qyK-5m-88n"/>
                         <outlet property="ImportantCheckBox" destination="0CA-ba-ZXW" id="yQi-Cr-IQf"/>
+                        <outlet property="ImportantColumn" destination="HHt-9v-wIP" id="hsa-Yu-TE9"/>
+                        <outlet property="NameColumn" destination="heg-DP-Guu" id="9ja-k2-XVI"/>
                         <outlet property="TextField" destination="8aZ-gx-c4P" id="geV-v9-QLx"/>
+                        <outlet property="ToDoTable" destination="1TD-V2-Qni" id="tO4-5d-IB3"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
