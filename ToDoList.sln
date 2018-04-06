@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoList", "ToDoList\ToDoList.csproj", "{D4338B77-84AE-46F6-B4C1-BEC560A3D75A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoList.Tests", "ToDoList.Tests\ToDoList.Tests.csproj", "{23EB913B-9C3B-4088-BC07-1FF4A163789F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -13,5 +15,9 @@ Global
 		{D4338B77-84AE-46F6-B4C1-BEC560A3D75A}.Debug|x86.Build.0 = Debug|x86
 		{D4338B77-84AE-46F6-B4C1-BEC560A3D75A}.Release|x86.ActiveCfg = Release|x86
 		{D4338B77-84AE-46F6-B4C1-BEC560A3D75A}.Release|x86.Build.0 = Release|x86
+		{23EB913B-9C3B-4088-BC07-1FF4A163789F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{23EB913B-9C3B-4088-BC07-1FF4A163789F}.Debug|x86.Build.0 = Debug|Any CPU
+		{23EB913B-9C3B-4088-BC07-1FF4A163789F}.Release|x86.ActiveCfg = Release|Any CPU
+		{23EB913B-9C3B-4088-BC07-1FF4A163789F}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
