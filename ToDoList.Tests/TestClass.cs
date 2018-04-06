@@ -1,19 +1,18 @@
 ﻿using System;
 using NUnit.Framework;
+using ToDoList;
 
 namespace ToDoList.Tests
 {
     [TestFixture]
     public class TestClass
     {
-        public TestClass()
+       [Test]
+        public void TestMethod()
         {
-        }
-
-        [Test]
-        public void TestMethod1()
-        {
-            Assert.That(1, Is.EqualTo(1));
+            IntPtr handle = IntPtr.Zero;
+            var controller = new ViewController(handle);
+            Assert.IsNotNull(controller);
         }
     }
 }
